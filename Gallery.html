@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedar - Gallery</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+         ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        ul a{
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            float: left;
+        }
+        ul a:hover{
+            background-color: #111;
+        }
+        h1{ 
+            margin-top: 40px;
+            margin: 20px 0; 
+        }
+        .slideshow{
+            width: 95%;
+            max-width: 1000px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            background: #000;
+        }
+        .slides{
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            min-height: 300px;
+        }
+        .slides img{
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: fade 18s linear infinite;
+            animation-fill-mode: both;
+        }
+        /* stagger start so each image shows for 3s in an 18s loop */
+        .slides img:nth-child(1){ animation-delay: -0s; }
+        .slides img:nth-child(2){ animation-delay: -3s; }
+        .slides img:nth-child(3){ animation-delay: -6s; }
+        .slides img:nth-child(4){ animation-delay: -9s; }
+        .slides img:nth-child(5){ animation-delay: -12s; }
+        .slides img:nth-child(6){ animation-delay: -15s; }
+
+        @keyframes fade{
+            0%   { opacity: 1 }
+            14.166% { opacity: 1 }
+            16.666% { opacity: 0 }
+            100% { opacity: 0 }
+        }
+
+        @media (max-width:600px){
+            .slides{ aspect-ratio: 4/4; }
+        }
+        
+        
+
+         .btn{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffdf4f;
+            color: #000000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 10px;
+        }
+        .btn1{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #a4a4a4;
+            color: #000000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="History.html">History</a>
+            <a href="Gallery.html">Gallery</a>
+            <a href="Contact.html">Contact</a>
+        </ul>
+    </div>
+    <div>
+    <h1>Temple Views</h1>
+
+    <div class="slideshow" aria-label="Image slideshow">
+        <div class="slides">
+            <img src="./pexels-shyam-mishra-203327-19271393 (1).jpg" alt="Kedarnath 1">
+            <img src="./pexels-abhra-ghosh-362148807-16152405.jpg" alt="Kedarnath 2">
+            <img src="./pexels-oyeyogi-34376161.jpg" alt="Kedarnath 3">
+            <img src="./pexels-priyanshi-garg-1879189-14970809.jpg" alt="Kedarnath 4">
+            <img src="./pexels-soubhagya23-18359749.jpg" alt="Kedarnath 5">
+            <img src="./pexels-soubhagya23-18359762.jpg" alt="Kedarnath 6">
+        </div>
+    </div>
+    
+        <h2>Trekking Journey</h2>
+        <div class="slideshow" aria-label="Image slideshow">
+            <div class="slides">
+                <img src=".//Assets/tJ/pexels-soubhagya23-18358503.jpg" alt="Trekking 1">
+                <img src=".//Assets/tJ/pexels-ankit-rainloure-1425442-33677268.jpg" alt="Trekking 2">
+                <img src=".//Assets/tJ/pexels-ashish-shukla-282193175-37606848.jpg" alt="Trekking 3">
+                <img src=".//Assets/tJ/pexels-ln-dangol-1265064-2409958.jpg" alt="Trekking 4">
+                <img src=".//Assets/tJ/pexels-soubhagya23-19010047.jpg" alt="Trekking 5">
+                <img src=".//Assets/tJ/pexels-tanmoy-pal-3640736-14114690.jpg" alt="Trekking 6">
+            </div>
+        </div>
+    </div>
+    <a href="index.html" class="btn">Back</a> <a href="Contact.html" class="btn1">Contact</a>
+</body>
+</html>
